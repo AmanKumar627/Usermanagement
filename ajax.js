@@ -20,7 +20,7 @@ $( document ).ready(function() {
         $.ajax({
             type : "POST",
             contentType : "application/json",
-            url : "http://localhost:8080/NoteApp/login",
+            url : "http://localhost:8081/NoteApp/login",
             data : JSON.stringify(formData),
             dataType : 'json',
             success : function(result) {

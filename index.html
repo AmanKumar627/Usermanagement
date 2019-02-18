@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
      <link href="global.css" type="text/css"   rel="stylesheet">
-     <script type="javascript" src='./ajax.js'></script>
+     
      </head>
     <title>Login</title>
   </head>
@@ -20,18 +20,24 @@
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="" method="post">
-                            <h3 class="text-center text-info">Login</h3>
+                            
+                                <div class="text-center">
+                                        <img class="img-circle img-thumbnail img-responsive" src="http://www.ittutorials.in/images/mi-logo.jpg" alt="User Management">
+                                    
+                                 <p class="lead">Login to your account</p>
+                                </div>
+                                <form id=loginverify></form>
                             <div class="form-group">
-                                <label for="username" class="text-info">Email:</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
+                                
+                                <input type="text" placeholder="username" id="firstname" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="password" class="text-info">Password:</label><br>
-                                <input type="password" name="password" id="password" class="form-control">
+                                
+                                <input type="password" placeholder="password" id="lastname" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                                <button type="button"  class="block">Login</button>
                             </div>
                             <div id="register-link" class="text-right">
                                 <a href="#" class="text-info">Register here</a>
@@ -42,10 +48,67 @@
             </div>
         </div>
     </div>
-
+   
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+            $(document).ready(function () {
+                $("#login").submit(function (event) {
+                    event.preventDefault();
+                    ajaxPost();
+    
+                });
+                function ajaxPost() {
+    
+                    // PREPARE FORM DATA
+                    var formData = {
+                        email: $("#firstname").val(),
+                        password: $("#lastname").val()
+                    }
+                    console.log(formData.email, formData.password);
+                
+                    $.ajax({
+    
+                type : "POST",
+                contentType : "application/json",
+                url :  "http://localhost:8081/NoteApp/login",
+                data : JSON.stringify(formData),
+                dataType : 'json',
+                beforeSend: function(xhr) {
+                xhr.setRequestHeader("Accept", "application/json");
+                xhr.setRequestHeader("Content-Type", "application/json");
+            },
+                success : function(result) {
+                    if(result.message == "done"){
+                        console.log('hello');
+                        window.location = "/home/bridgelabz/Documents/MyProject/Dashboard.html";
+
+                        }
+                        else{
+
+                            console.log('error')
+                    alert('invalid username and password')
+                        }
+                    console.log(result);
+
+                }
+            });
+            resetData();
+        }
+        function resetData(){
+        $("#firstname").val("");
+        $("#lastname").val("");
+    }
+            }
+            )
+    
+        </script>
+</body>
+
+</html>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
   </body>
