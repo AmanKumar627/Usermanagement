@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Dashboard.css">
+<style>
+.grey{
+    background-color: azure;
+    padding:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+
+                </button>
+                <div class="navbar-brand">
+
+
+                    <a id="menu-toggle" class="active">
+
+                        <p>
+                            UserManagement
+
+                            <span class="glyphicon glyphicon-align-justify btn-menu toggle"></span>
+                        </p>
+                    </a>
+                </div>
+                 <ul class="nav navbar-nav navbar-right">
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin User <b class="fa fa-angle-down"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+                            <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul> 
+            </div>
+        </div>
+        </nav>
+     
+        <!-- Top Menu Items -->
+        <div id="side-wrapper" class="active">
+            <nav id="spy">
+
+                <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+                <!-- <div class="collapse navbar-collapse navbar-ex1-collapse"> -->
+                    <ul class="side-nav nav">
+                        <li>
+                            <a href=""><i class="fa fa-fw fa fa-question-circle"></i>Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-search"></i>
+                                User <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                            <ul id="submenu-1" class="collapse">
+                                <li><a href="/home/bridgelabz/Documents/MyProject/NewUser.html"></i>new user</a></li>
+                                <li><a href="#"></i> user list</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="file:///home/bridgeit/Documents/UserManagement/profile.html"><i class="fa fa-fw fa-user-plus"></i>Profile</a>
+                        </li>
+
+                        <li>
+                            <a href="file:///home/bridgeit/Documents/UserManagement/login.html"><i class="fa fa-fw fa-paper-plane-o"></i>Logout</a>
+                        </li>
+
+                    </ul>
+               
+                <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+       
+        <div id="page-content-wrapper" style="padding-top:10px; ">
+                <div class="page-content">
+                    <div class="container-fluid">
+                           
+                    <div class="row">
+                            <div class="well" style=" padding-top:80px; background-color: white">
+                                    <p style="text-align:left;"></p>
+                                            <h>New User</h>
+                                            <span style="float:right;">  <a href=""><i class="fa fa-home "></i>Home</a>  /   <a href="">Dashboard</a></span>
+                                            </p>
+                              
+                            </div>
+                        </div>
+                    </div> 
+                        
+                    
+                           <!-- <div class=container-fluid>
+                                <div class="row">
+                                        <div class="col-md-8 col-md-offset-0">
+                                          <form class="form-horizontal" role="form">
+                                              
+
+
+
+                            <!-- <div class="well" style="padding-top :300px; padding: bottom 50px; background-color:white"> -->
+                                <!-- <div row>
+                                    <div class="form-group">
+                                            <div class="col-sm-4">
+                                            <label for="firstname">First name:</label>
+                                              <input type="text" name="fistName" placeholder="First Name" class="form-control">
+                                            </div>
+
+                                            <div class="col-sm-4">
+                                            <label for="middleName">Middle Name:</label>
+                                              <input type="text" name="middleName" placeholder="Middle Name" class="form-control">
+                                            </div>
+                                            
+                                            <div class="col-sm-4">
+                                            <label for="lastName">Last Name:</label>
+                                              <input type="text" name="lastName" placeholder="Last Name" class="form-control">
+                                            </div>
+                                          </div>
+                                </div>
+
+
+                                       <div row>
+                                          <div class="form-group">
+                                          <div class="col-sm-4">
+                                                <label for="Date Of Birth">Date OF Birth:</label>
+                                                <input type="date" placeholder="Date Of Birth" class="form-control">
+                                                </div>
+    
+                                                <div class="col-sm-4">
+                                                   <label for="gender">Gender</label> 
+                                                <select type="gender" placeholder="Gender" class="form-control">
+                                                        <option value="female">Female</option>
+                                                        <option value="male">Male</option>
+                                                      </select>
+                                                </div>
+                                          
+                                                
+                                                <div class="col-sm-4">
+                                                <label for="country">Country:</label>                                                      
+                                              <select input type="Country" placeholder="Country" class="form-control">
+                                                  <option value="india">India</option>
+                                                  <option value="africa">Africa</option>
+                                                  <option value="Pakistan">Pakistan</option>
+                                                </div>
+                                          </div>
+                                        </div>
+
+                                                 <div row>
+                                                   <div class="form-group"> 
+                                                    <div class="col-sm-6">
+                                                     <label for="firstname">First name:</label>
+                                                       <input type="text" name="fistName" placeholder="First Name" class="form-control"> 
+                                                    </div>
+        
+                                                    <div class="col-sm-4">
+                                                    <label for="middleName">Phone</label>
+                                                      <input type="phone" name="phone" placeholder="Phone Number" class="form-control">
+                                                    </div>
+                                                  
+                                                    <div class="col-sm-4">
+                                                    <label for="middleName">Phone +Ext</label>
+                                                      <input type="phone" name="phone" placeholder="Phone Number" class="form-control">
+                                                    </div>
+
+
+                                                </div>
+                                               </div>
+                                               
+
+                                               <div row>
+                                                    <div class="form-group"> 
+                                                     <div class="col-sm-6">
+                                                      <label for="firstname">First name:</label>
+                                                        <input type="text" name="fistName" placeholder="First Name" class="form-control"> 
+                                                     </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+
+
+
+
+                                            </form>
+                                            </div>
+                                          
+
+
+                                    
+                            </div>
+                            </div>
+
+                
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            
+        <!-- /#page-wrapper -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-0">
+                    <div class="panel panel-heading">
+                        <div class="panel-heading">
+                            <h3>General</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable name="userName" class="control-lable">First Name</lable>
+                                        <input type="text" name="userName" class="form-control"
+                                            tabindex="11">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable name="userName" class="control-lable">Middle
+                                        Name</lable>
+                                        <input type="text" name="middleName" class="form-control"
+                                            tabindex="12">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable name="userName" class="control-lable">Last Name</lable>
+                                        <input type="text" name="lastName" class="form-control"
+                                            tabindex="13">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable class="control-lable">Date Of Birth</lable>
+                                        <div class="input-group date" id="dob">
+                                            <input type="text" id="dateOfBirth" class="form-control"
+                                                data-bv-date="true" data-bv-date-format="MM/DD/YYYY"
+                                                data-bv-date-message="Invalid date of birth"> <span
+                                                class="input-group-addon"> <i class="fa fa-calender"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable class="control-lable">Gender</lable>
+                                        <select name="gender" tabindex="" class="form-control"
+                                            style="width: 100%"
+                                            class="select-basic select2-hidden-accessible"
+                                            data-bv-nonempty="empty">
+                                            <option value>--Select--</option>
+                                            <option value>Female</option>
+                                            <option value>Male</option>
+                                        </select> <span class="selection"></span> <span class="dropdown-wrapper"
+                                            aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable class="control-lable">Country</lable>
+                                        <select name="country" tabindex="-1"
+                                            class="select-basic select2-hidden-accessible"
+                                            data-bv-nonempty="empty" style="width: 100%">
+                                            <option value>--Choose Country--</option>
+                                            <option value="india">India</option>
+                                            <option value="america">America</option>
+                                            <option value="australia">Australia</option>
+                                            <option value="london">London</option>
+                                            <option value="paris">Paris</option>
+                                            <option value="newYork">New-York</option>
+                                            <option value="egypt">Egypt</option>
+                                            <option value="france">France</option>
+                                            <option value="germany">Germany</option>
+                                        </select> 
+                                        <span class="selection"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable class="control-lable">Phone</lable>
+                                        <input type="text" name="phone" class="form-control"
+                                            tabindex="2">
+                                        <div class="container row">(999)999-9999</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable class="control-lable">Phone + Ext</lable>
+                                        <input type="text" name="phoneExt" class="form-control"
+                                            tabindex="2">
+                                        <div class="container row">(999)999-9999-99</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable class="control-lable">Email</lable>
+                                        <input type="text" name="email" class="form-control"
+                                            tabindex="9">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable class="control-lable">Address</lable>
+                                        <textarea name="address" rows="5" cols="10" tabindex="10"
+                                            class="form-control">
+                                    </textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" ::before>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable name="userName" class="control-lable">Username</lable>
+                                        <input type="text" name="userName" class="form-control"
+                                            tabindex="11">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable name="userName" class="control-lable">Password</lable>
+                                        <input type="password" name="userName" class="form-control"
+                                            tabindex="12">
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable name="userName" class="control-lable">Confirm
+                                        Password</lable>
+                                        <input type="password" name="userName" class="form-control"
+                                            tabindex="13">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" ::before>
+                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                    <div class="form-group">
+                                        <lable name="userName" class="control-lable">User Role</lable>
+                                        <select name="gender" tabindex="" class="form-control"
+                                            style="width: 100%"
+                                            class="select-basic select2-hidden-accessible"
+                                            data-bv-nonempty="empty"">
+                                            <option value>--Select--</option>
+                                            <option value>Admin</option>
+                                            <option value>User</option>
+                                        </select> <span class="selection"></span> <span class="dropdown-wrapper"
+                                            aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                            </div>  <!-- row ended -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-heading">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Photo</h3>
+                            <p class="panel-subtitle"></p>
+                        </div>
+                        <div class="panel-body">
+                            <div id="pic">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="divPreviewPhoto" class="text-center" style="display: none;">
+                                            <center style="border: 2px solid #e6e6e6; padding: 10px 10px;">
+                                                <img src="" id="imgsrc" class="img-responsive" style="height: 180px; width: 170px;">
+                                            </center><br>
+                                            <input type="button" class="btn btn-default btn-sm" value="Change Photo" onclick="uploadPhoto();">
+                                        </div>
+                                    </div><!-- col-md-12 -->
+                                </div><!-- row -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="divUploadPhoto">	
+                                            <label class="control-label">Acceptable image formats are jpg, jpeg, png & gif. </label><br>
+                                            <label class="control-label">Maximum image size allowed is 2MB. </label><br>
+                                            <div class="dropify-wrapper">
+                                                <div class="dropify-message">
+                                                    <span class="file-icon">
+                                                        <p>Click here to choose file</p></span>
+                                                        <p class="dropify-error">Oop's something went wrong</p>												
+                                                </div>
+                                                <div class="dropify-loader"></div>
+                                                <div class="dropify-errors-container">
+                                                    <ul></ul>
+                                                </div>
+                                                <input type="file" id="chooseImageFile">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- id=pic  -->
+                        </div><!--panel body  -->
+                    </div><!-- panel panel-heading end -->
+                </div><!--md-4 end  -->
+            </div>
+        </div>
+    
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+            $(".side-nav .collapse").on("hide.bs.collapse", function () {
+                $(this).prev().find(".fa").eq(1).removeClass("fa-angle-right").addClass("fa-angle-down");
+            });
+            $('.side-nav .collapse').on("show.bs.collapse", function () {
+                $(this).prev().find(".fa").eq(1).removeClass("fa-angle-down").addClass("fa-angle-right");
+            });
+        })
+
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("active");
+        });
+
+    </script>
+</body>
+
+</html>

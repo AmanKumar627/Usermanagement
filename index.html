@@ -7,7 +7,8 @@
      
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
-     <link href="global.css" type="text/css"   rel="stylesheet">
+     <link href="global.css" type="text/css"   rel="stylesheet"
+     >
      
      </head>
     <title>Login</title>
@@ -80,7 +81,7 @@
                 xhr.setRequestHeader("Content-Type", "application/json");
             },
                 success : function(result) {
-                    if(result.message == "done"){
+                    if(result == "done"){
                         console.log('hello');
                         window.location = "/home/bridgelabz/Documents/MyProject/Dashboard.html";
 

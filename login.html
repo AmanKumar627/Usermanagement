@@ -13,8 +13,8 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
-    <title>User Managaement</title>
+   
+    <title>UserManagaement</title>
    
 </head>
 
@@ -25,9 +25,10 @@
 
         <div class="d-flex justify-content-lg-center  " style="padding-top: 150px">
             <div class="well  well-lg col-lg-4  " style="padding-top: 50px">
-                <img src="mi-logo.jpg" class="img-circle center-block" alt="Cinque Terre">
+                <div class="text-center">
+                <img class="img-circle img-thumbnail img-responsive" src="http://www.ittutorials.in/images/mi-logo.jpg" alt="User Management">                     
                 <div class="d-flex justify-content-center">
-                    <p>Login to our account</p>
+                    <p class="lead">Login to your account</p>
                 </div>
 
 
@@ -35,7 +36,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group ">
-                                <input type="email" id="firstname" class="form-control" placeholder="enter your email">
+                                <input type="text" id="firstname" class="form-control" placeholder="Username">
 
                             </div>
                         </div>
@@ -45,22 +46,21 @@
 
                             <div class="form-group ">
 
-                                <input type="password" id="lastname" class="form-control" placeholder="enter your password">
+                                <input type="password" id="lastname" class="form-control" placeholder="password">
 
                             </div>
                         </div>
-
+                       
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <button class="btn btn-primary btn-lg-3 btn-block" type="submit">LogIn </button>
+                            <input type="submit" name="btnLogin" value="LOGIN" id="btnLogin" class="btn btn-primary btn-lg btn-block" />
                         </div>
                     </div>
                 </form>
                 <div>
                     <span class="glyphicon glyphicon-lock">
-                        <a href="file:///home/bridgeit/Documents/UserManagement/forgetPassword.html" class="btn btn-link">forget
-                            password?</a>
+                        <a href="/home/bridgelabz/Documents/MyProject/forgotpassword.html" class="btn btn-link">ForgetPassword?</a>
                     </span>
                 </div>
 
@@ -82,26 +82,27 @@
     
                     // PREPARE FORM DATA
                     var formData = {
-                        email: $("#firstname").val(),
+                        userName: $("#firstname").val(),
                         password: $("#lastname").val()
                     }
-                    console.log(formData.email, formData.password);
+                    console.log(formData.userName, formData.password);
                 
                     $.ajax({
     
                 type : "POST",
                 contentType : "application/json",
-                url :  "http://localhost:8081/NoteApp/login",
+                url :  "http://localhost:8081/NoteApp/read",
                 data : JSON.stringify(formData),
                 dataType : 'json',
                 beforeSend: function(xhr) {
                 xhr.setRequestHeader("Accept", "application/json");
                 xhr.setRequestHeader("Content-Type", "application/json");
             },
-                success : function(result) {
-                    if(result.message == "done"){
-                        console.log('hello');
-                        window.location = '/home/bridgelabz/Documents/MyProject/Dashboard.html';
+                success : function(result){
+                        console.log(result.status);
+                        if(result.status== "done"){                
+                           console.log('hello');
+                        window.location = 'file:///home/bridgelabz/Documents/MyProject/Dashboard.html';
 
                         }
                         else{
@@ -111,9 +112,9 @@
                         }
                     console.log(result);
 
-                }
-            });
-            resetData();
+               }
+             });
+             resetData();
         }
         function resetData(){
         $("#firstname").val("");

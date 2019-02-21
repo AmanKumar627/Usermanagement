@@ -1,0 +1,32 @@
+.card {
+    margin: 50px auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 50px; /* Added */   
+    width: 25rem;    
+}
+h2 {
+padding: 20px;
+/* border: 1px solid grey; */
+margin : 10px;
+width: 97%;
+}
+.alert {
+  font-size:15px;
+   padding: 10px;
+/* border: 1px solid grey; */
+margin : 10px;
+width: 97%;
+}
+.form-control {
+     font-size:15px;	 
+   padding: 10px;
+   /* border: 1px solid grey; */
+   margin : 10px;
+   width: 97%;
+}
+.btn {
+  font-size:15px;
+}
+
+
+
