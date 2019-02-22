@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="Dashboard.css">
+         <!-- <link rel="stylesheet"  href="test2.css">   
+       <script src="test2.js"></script>      -->
 <style>
 .grey{
     background-color: azure;
@@ -104,8 +106,9 @@
                             </div>
                         </div>
                     </div> 
-                        
-                    
+                   </div>     
+                  </div>
+
                            <!-- <div class=container-fluid>
                                 <div class="row">
                                         <div class="col-md-8 col-md-offset-0">
@@ -114,7 +117,7 @@
 
 
 
-                            <!-- <div class="well" style="padding-top :300px; padding: bottom 50px; background-color:white"> -->
+                             <div class="well" style="padding-top :300px; padding: bottom 50px; background-color:white"> -->
                                 <!-- <div row>
                                     <div class="form-group">
                                             <div class="col-sm-4">
@@ -221,7 +224,7 @@
         <!-- /#page-wrapper -->
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-8 col-md-offset-0">
+                <div class="col-md-8">
                     <div class="panel panel-heading">
                         <div class="panel-heading">
                             <h3>General</h3>
@@ -256,7 +259,7 @@
                                     <div class="form-group">
                                         <lable class="control-lable">Date Of Birth</lable>
                                         <div class="input-group date" id="dob">
-                                            <input type="text" id="dateOfBirth" class="form-control"
+                                            <input type="date" id="dateOfBirth" class="form-control"
                                                 data-bv-date="true" data-bv-date-format="MM/DD/YYYY"
                                                 data-bv-date-message="Invalid date of birth"> <span
                                                 class="input-group-addon"> <i class="fa fa-calender"></i>
@@ -281,7 +284,7 @@
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <lable class="control-lable">Country</lable>
-                                        <select name="country" tabindex="-1"
+                                        <select input type="Country" placeholder="Country" class="form-control">
                                             class="select-basic select2-hidden-accessible"
                                             data-bv-nonempty="empty" style="width: 100%">
                                             <option value>--Choose Country--</option>
@@ -365,7 +368,7 @@
                                         <select name="gender" tabindex="" class="form-control"
                                             style="width: 100%"
                                             class="select-basic select2-hidden-accessible"
-                                            data-bv-nonempty="empty"">
+                                            data-bv-nonempty="empty">
                                             <option value>--Select--</option>
                                             <option value>Admin</option>
                                             <option value>User</option>
@@ -377,7 +380,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                 <div class="col-md-4">
                     <div class="panel panel-heading">
                         <div class="panel-heading">
                             <h3 class="panel-title">Photo</h3>
@@ -394,36 +397,81 @@
                                             <input type="button" class="btn btn-default btn-sm" value="Change Photo" onclick="uploadPhoto();">
                                         </div>
                                     </div><!-- col-md-12 -->
-                                </div><!-- row -->
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div id="divUploadPhoto">	
-                                            <label class="control-label">Acceptable image formats are jpg, jpeg, png & gif. </label><br>
-                                            <label class="control-label">Maximum image size allowed is 2MB. </label><br>
-                                            <div class="dropify-wrapper">
-                                                <div class="dropify-message">
-                                                    <span class="file-icon">
-                                                        <p>Click here to choose file</p></span>
+                                </div> 
+                    <!----------------------------------------------------image upload----------------------------------------------->        
+                                    
+                                              <div class="row">                 
+                                            <label>Acceptable image formats are jpg, jpeg, png & gif. </label><br>
+                                            <label>Maximum image size allowed is 2MB. </label><br>
+                                            
+                                                
+                                                     <span class="file-icon"> 
+                                                         <p>Click here to choose file</p></span>
                                                         <p class="dropify-error">Oop's something went wrong</p>												
+                                                 
+                                                 <div class="image-uploader" data-base-height="200" data-base-width="200">
+                                                    <div class="image"> 
+                                                                 <label>click here to choose any image</label>
+                                                             
+                                                        
+                                                    </img>
+                                                    <input id="uploader" type="file" />
+                                        
                                                 </div>
-                                                <div class="dropify-loader"></div>
-                                                <div class="dropify-errors-container">
-                                                    <ul></ul>
                                                 </div>
-                                                <input type="file" id="chooseImageFile">
+                                        </div> 
+                                        <!-- <input id="uploader" type="file" />
+                                        <div class="zoom" style="display:none;">
+                                            <div class="plus"></div>
+                                            <div class="minus"></div>
+                                            <div class="close"></div>
+                                        </div> -->
+                                        <!-- <div class="container">
+                                        <div class="col-4-md">
+                                            <div class="image-uploader" data-base-height="250" data-base-width="250">
+                                                <div class="image">
+                                                    <label>Click or drag a file to change your image</label>
+                                                    <img />
+                                                </div>
+                                                <input id="uploader" type="file" />
+                                                <div class="zoom" style="display:none;">
+                                                    <div class="plus"></div>
+                                                    <div class="minus"></div>
+                                                    <div class="close"></div>
+                                                </div>
+                                            </div>
                                             </div>
                                         </div>
+                                    </div>   -->
+
+
+
                                     </div>
                                 </div>
                             </div> <!-- id=pic  -->
                         </div><!--panel body  -->
                     </div><!-- panel panel-heading end -->
-                </div><!--md-4 end  -->
+                      
+
+
+            <!--md-4 end  -->
             </div>
         </div>
-    
-    
-
+       <div class="row">
+        <div class=  "col-xs-12 col-sm-6 col-md-10">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary center-block">Submit</button>
+            </div>
+            
+             <!-- <div class=  "col-xs-12 col-sm-6 col-md-10">
+            <div class="form-group">  
+                <input type="Reset" />  
+            </div>   -->
+         </div>
+         </div>
+         </div>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>

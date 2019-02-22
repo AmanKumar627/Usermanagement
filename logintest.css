@@ -1,4 +1,4 @@
-.card {
+ .card {
     margin: 50px auto; /* Added */
     float: none; /* Added */
     margin-bottom: 50px; /* Added */   
@@ -26,7 +26,7 @@ width: 97%;
 }
 .btn {
   font-size:15px;
-}
+} 
 
 
 
