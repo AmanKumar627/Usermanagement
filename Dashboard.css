@@ -172,3 +172,21 @@
     color: #fff;
     padding-right: 15px;
 }
+
+
+/*here comes fill all the details*/
+
+.palel-primary
+	{
+		border-color: #bce8f1;
+	}
+	.panel-primary>.panel-heading
+	{
+		background:#bce8f1;
+		
+	}
+	.panel-primary>.panel-body
+	{
+		background-color: #EDEDED;
+	}
+

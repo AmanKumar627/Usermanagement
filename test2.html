@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="Dashboard.css">
-         <!-- <link rel="stylesheet"  href="test2.css">   
-       <script src="test2.js"></script>      -->
+     
+         <link rel="stylesheet"  href="test2.css">   
+       <!-- <script src="test2.js"></script>       -->
 <style>
 .grey{
     background-color: azure;
@@ -224,6 +225,8 @@
         <!-- /#page-wrapper -->
         <div class="container-fluid">
             <div class="row">
+         <!-- <div class="panel panel-primary"> -->
+            <form id="adduser" onsubmit="required()">
                 <div class="col-md-8">
                     <div class="panel panel-heading">
                         <div class="panel-heading">
@@ -233,9 +236,9 @@
                             <div class="row">
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="form-group">
-                                        <lable name="userName" class="control-lable">First Name</lable>
+                                        <lable name="Firstname" class="control-lable">First Name</lable>
                                         <input type="text" name="userName" class="form-control"
-                                            tabindex="11">
+                                             id="firstName">
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 col-xs-12">
@@ -243,14 +246,14 @@
                                         <lable name="userName" class="control-lable">Middle
                                         Name</lable>
                                         <input type="text" name="middleName" class="form-control"
-                                            tabindex="12">
+                                              id="middleName">
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <lable name="userName" class="control-lable">Last Name</lable>
                                         <input type="text" name="lastName" class="form-control"
-                                            tabindex="13">
+                                            id="lastName">
                                     </div>
                                 </div>
                             </div>
@@ -270,7 +273,7 @@
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <lable class="control-lable">Gender</lable>
-                                        <select name="gender" tabindex="" class="form-control"
+                                        <select  type="gender" id="gender" class="form-control"
                                             style="width: 100%"
                                             class="select-basic select2-hidden-accessible"
                                             data-bv-nonempty="empty">
@@ -284,7 +287,7 @@
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <lable class="control-lable">Country</lable>
-                                        <select input type="Country" placeholder="Country" class="form-control">
+                                        <select input type="Country" placeholder="Country" id="Country" class="form-control">
                                             class="select-basic select2-hidden-accessible"
                                             data-bv-nonempty="empty" style="width: 100%">
                                             <option value>--Choose Country--</option>
@@ -307,7 +310,7 @@
                                     <div class="form-group">
                                         <lable class="control-lable">Phone</lable>
                                         <input type="text" name="phone" class="form-control"
-                                            tabindex="2">
+                                            id="phone">
                                         <div class="container row">(999)999-9999</div>
                                     </div>
                                 </div>
@@ -315,7 +318,7 @@
                                     <div class="form-group">
                                         <lable class="control-lable">Phone + Ext</lable>
                                         <input type="text" name="phoneExt" class="form-control"
-                                            tabindex="2">
+                                            id="phoneExt">
                                         <div class="container row">(999)999-9999-99</div>
                                     </div>
                                 </div>
@@ -325,13 +328,13 @@
                                     <div class="form-group">
                                         <lable class="control-lable">Email</lable>
                                         <input type="text" name="email" class="form-control"
-                                            tabindex="9">
+                                            id="email">
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <lable class="control-lable">Address</lable>
-                                        <textarea name="address" rows="5" cols="10" tabindex="10"
+                                        <textarea name="address" rows="5" cols="10" id="address"
                                             class="form-control">
                                     </textarea>
                                     </div>
@@ -342,14 +345,14 @@
                                     <div class="form-group">
                                         <lable name="userName" class="control-lable">Username</lable>
                                         <input type="text" name="userName" class="form-control"
-                                            tabindex="11">
+                                            id="confirmUsername">
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <lable name="userName" class="control-lable">Password</lable>
                                         <input type="password" name="userName" class="form-control"
-                                            tabindex="12">
+                                            id="confirmPassword">
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-6 col-xs-12">
@@ -357,7 +360,7 @@
                                         <lable name="userName" class="control-lable">Confirm
                                         Password</lable>
                                         <input type="password" name="userName" class="form-control"
-                                            tabindex="13">
+                                            id="confirmPasswordagain">
                                     </div>
                                 </div>
                             </div>
@@ -365,7 +368,7 @@
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="form-group">
                                         <lable name="userName" class="control-lable">User Role</lable>
-                                        <select name="gender" tabindex="" class="form-control"
+                                        <select name="gender" id="role" class="form-control"
                                             style="width: 100%"
                                             class="select-basic select2-hidden-accessible"
                                             data-bv-nonempty="empty">
@@ -386,7 +389,7 @@
                             <h3 class="panel-title">Photo</h3>
                             <p class="panel-subtitle"></p>
                         </div>
-                        <div class="panel-body">
+                         <div class="panel-body">
                             <div id="pic">
                                 <div class="row">
                                     <div class="col-md-12">
@@ -397,7 +400,7 @@
                                             <input type="button" class="btn btn-default btn-sm" value="Change Photo" onclick="uploadPhoto();">
                                         </div>
                                     </div><!-- col-md-12 -->
-                                </div> 
+                                </div>  
                     <!----------------------------------------------------image upload----------------------------------------------->        
                                     
                                               <div class="row">                 
@@ -405,44 +408,32 @@
                                             <label>Maximum image size allowed is 2MB. </label><br>
                                             
                                                 
-                                                     <span class="file-icon"> 
+                                                     <!-- <span class="file-icon"> 
                                                          <p>Click here to choose file</p></span>
-                                                        <p class="dropify-error">Oop's something went wrong</p>												
+                                                        											 -->
                                                  
-                                                 <div class="image-uploader" data-base-height="200" data-base-width="200">
+                                                 <!-- <div class="image-uploader" data-base-height="200" data-base-width="200">
                                                     <div class="image"> 
                                                                  <label>click here to choose any image</label>
                                                              
                                                         
-                                                    </img>
-                                                    <input id="uploader" type="file" />
+                                                    <img/>
+                                                    <img/>
+                                                     <input id="uploader" type="file" />
                                         
                                                 </div>
                                                 </div>
-                                        </div> 
-                                        <!-- <input id="uploader" type="file" />
-                                        <div class="zoom" style="display:none;">
-                                            <div class="plus"></div>
-                                            <div class="minus"></div>
-                                            <div class="close"></div>
-                                        </div> -->
-                                        <!-- <div class="container">
+                                        </div>  -->
+
                                         <div class="col-4-md">
-                                            <div class="image-uploader" data-base-height="250" data-base-width="250">
-                                                <div class="image">
-                                                    <label>Click or drag a file to change your image</label>
-                                                    <img />
-                                                </div>
-                                                <input id="uploader" type="file" />
-                                                <div class="zoom" style="display:none;">
-                                                    <div class="plus"></div>
-                                                    <div class="minus"></div>
-                                                    <div class="close"></div>
-                                                </div>
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </div>   -->
+                                                <div class="image-uploader" data-base-height="250" data-base-width="250">
+                                                    <div class="image">
+                                                        <label>Click or drag a file to change your image</label>
+                                                        <img />
+                                                    </div>
+                                                    <input id="uploader" type="file" />
+
+                                        
 
 
 
@@ -473,7 +464,7 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+     <script src="register.js"></script> 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 
@@ -493,6 +484,123 @@
             $("#wrapper").toggleClass("active");
         });
 
+
+
+ $(document).ready(function () {
+
+$("#adduser").submit(function (event) {
+    event.preventDefault();
+    ajaxPost();
+
+});
+function ajaxPost() {
+
+    // PREPARE FORM DATA
+    var formData = {
+        firstName: $("#firstName").val(),
+        lastName: $("#lastName").val(),
+        middleName: $("#middleName").val(),
+        dateOfBirth: $("#dateOfBirth").val(),
+        gender: $("#gender").val(),
+        country: $("#Country").val(),
+        phone_number: $("#phone").val(),
+        phone_Ext: $("#phoneExt").val(),
+        email: $("#email").val(),
+        address: $("#address").val(),
+
+        // confirm_password: $("#confirm_password").val(),
+        // role: $("#role").val(),
+        // userName: $("#userName").val(),
+        // address: $("#address").val(),
+
+    
+
+
+    }
+    console.log(formData.firstName,formData.lastname
+        );
+
+    $.ajax({
+
+type : "POST",
+contentType : "application/json",
+url :  "http://localhost:8081/NoteApp/save",
+data : JSON.stringify(formData),
+dataType : 'json',
+beforeSend: function(xhr) {
+xhr.setRequestHeader("Accept", "application/json");
+xhr.setRequestHeader("Content-Type", "application/json");
+},
+success : function(result) {
+    // if(result.message == "done"){
+        console.log('hello');
+        window.location = 'file:////home/bridgelabz/Documents/MyProject/Profile.html';
+
+       }
+//         else{
+
+//             console.log('error')
+//     alert('invalid username and password')
+//         }
+//     console.log(result);
+
+// }
+});
+resetData();
+}
+function resetData(){
+
+$("#firstName").val("");
+$("#lastName").val("");
+$("#middleName").val(""),
+$("#dateOfBirth").val(""),
+$("#gender").val(""),
+$("#country").val(""),
+$("#phone").val(""),
+$("#phoneExt").val(""),
+$("#email").val(""),
+$("#password").val(""),
+$("#address").val()
+
+//  $("#confirm_password").val(""),
+//  $("#role").val(""),
+//  $("#userName").val(""),
+//  $("#address").val("")
+
+
+}
+}
+)
+
+$('#left').click(function(){
+
+$(this).toggleClass('fa fa-chevron-left fa fa-chevron-right');
+
+});
+
+
+// $('#datepicker').datepicker({
+// uiLibrary: 'bootstrap',
+// format: "dd-mm-yyyy"
+// });
+
+
+$(".toggle-password").click(function() {
+
+$(this).toggleClass("fa-fw fa-eye-slash");
+var input = $($(this).attr("toggle"));
+if (input.attr("type") == "password") {
+  input.attr("type", "text");
+} else {
+  input.attr("type", "password");
+}
+});
+$('#password, #confirm_password').on('keyup keypress keydown', function () {
+if ($('#password').val() == $('#confirm_password').val()) {
+    $('#message').html('Matching').css('color', 'green');
+} else 
+    $('#message').html('Not Matching').css('color', 'red');
+});
     </script>
 </body>
 
