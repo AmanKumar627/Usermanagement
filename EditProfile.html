@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="Dashboard.css">
+    <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+     <link href="test2.css" rel="stylesheet"> 
+
+</head>
+
+<body>
+
+
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+
+                    </button>
+                    <div class="navbar-brand">
+
+                        <p style="color: blanchedalmond">
+                            UserManagement
+                        </p>
+                    </div>
+                    <a id="menu-toggle" class="active" style="padding-top: 5px">
+                        <i id="left" class="fa fa-chevron-right"></i>
+                        <!-- <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin User <b class="fa fa-angle-down"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+                            <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul> -->
+                </div>
+            </div>
+        </nav>
+
+        <!-- Top Menu Items -->
+        <div id="side-wrapper" class="active">
+            <nav id="spy">
+
+                <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+                <!-- <div class="collapse navbar-collapse navbar-ex1-collapse"> -->
+                <ul class="side-nav nav">
+                    <li>
+                        <a href="file:///home/bridgelabz/Documents/MyProject/Dashboard.html"><i class="fa fa-home "></i>&nbsp;Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="glyphicon glyphicon-user"></i>
+                            &nbsp; User <i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                        <ul id="submenu-1" class="collapse">
+                            <li><a href="file:///home/bridgelabz/Documents/MyProject/NewUser.html"></i>new user</a></li>
+                            <li><a href=""></i> user list</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="file:///home/bridgelabz/Documents/MyProject/Profile.html"><i class="fa fa-fw fa-user-plus"></i>&nbsp; Profile</a>
+                    </li>
+
+                    <li>
+                        <a href="file:///home/bridgelabz/Documents/MyProject/login.html"><i class="glyphicon glyphicon-off"></i>&nbsp;Logout</a>
+                    </li>
+
+                </ul>
+
+                <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+        <!-- /#page-wrapper -->
+        <div class="container-fluid ">
+            <div id="page-content-wrapper" style="padding-top:10px; ">
+                <div class="page-content">
+                    <form id="adduser" onsubmit="required()">
+                        <div class="row">
+                            <div class="well" style=" padding-top:80px; background-color: white">
+                                <p style="text-align:left;">New User
+                                    <span style="float:right;">
+                                        <a href="file:///home/bridgeit/Documents/UserManagement/check.html"><i class="fa fa-home "></i>Home</a>
+                                        / <a href="file:///home/bridgeit/Documents/UserManagement/check.html">Dashboard</a>
+                                    </span>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+
+                                <div class="col-md-8 ">
+                                    <div class="jumbotron" style="background-color:white">
+                                        <p>General</p>
+
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-4">
+
+
+                                                <div class="form-group">
+
+                                                    <label class="titleName">First Name</label>
+                                                    <input name="first_name" class="form-control" placeholder="" type="text"
+                                                        id="firstName" required>
+
+                                                    <!-- <input type="text" name="first_name"  class="form-control input-lg"
+                                            placeholder="First Name" tabindex="1"> -->
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                                <div class="form-group">
+                                                    <label class="titleName">Middle Name</label>
+                                                    <input name="middle_name" class="form-control" placeholder="" type="text"
+                                                        id="middleName">
+
+
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                                <div class="form-group">
+                                                    <label class="titleName">Last Name</label>
+                                                    <input name="last_name" class="form-control" placeholder="" type="text"
+                                                        id="lastName">
+                                                    <p class="error" style="font-size: 12px"><span class="emsg_last hidden">Alteast
+                                                            3 letter required* </span></p>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-4">
+
+                                                <div class="form-group">
+                                                <lable class="control-lable">Date Of Birth</lable>
+                                                <div class="input-group date" id="dob">
+                                                    <input type="date" id="dateOfBirth" class="form-control"
+                                                        data-bv-date="true" data-bv-date-format="MM/DD/YYYY"
+                                                        data-bv-date-message="Invalid date of birth"> <span
+                                                        class="input-group-addon"> <i class="fa fa-calender"></i>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                                <!-- <div class="form-group">
+                                                    <label class="titleName">Date Of Birth</label>
+                                                    <input id="datepicker" /> -->
+
+                                                </div>
+                                            
+                                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                                <div class="form-group">
+                                                    <label class="titleName">Gender</label>
+                                                    <select class="form-control" id="gender">
+                                                        <option value="" selected hidden>--Select--</option>
+
+                                                        <option value="male">Male</option>
+                                                        <option value="female">female</option>
+                                                        <option value="none">none</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                                <div class="form-group">
+                                                    <label class="titleName">Country</label>
+                                                    <select class="form-control" id="country">
+                                                        <option value="" selected hidden>--Select--</option>
+                                                        <option value="India">India</option>
+                                                        <option value="India">salem</option>
+                                                        <option value="tamilnadu">Tamil Nadu</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="titleName">Phone</label>
+                                                    <input name="phone_number" class="form-control" placeholder="phone_number"
+                                                        type="text" id="phone">
+                                                    <label class="titleName">999 999 9999</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="titleName">Phone + Ext</label>
+                                                    <input name="phone_Ext" id="phoneExt" class="form-control"
+                                                        placeholder="" type="text" id="phone_Ext">
+                                                    <label  class="titleName" >(+91)999 999 9999</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="titleName">Email</label>
+                                                    <input name="mail" class="form-control" placeholder="Email or login"
+                                                        type="email" id="email">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="titleName">Address</label>
+                                                    <textarea name="address" id="address" class="form-control" cols="20"
+                                                        rows="5"></textarea>
+                                                    <!-- <input name="address" class="form-control" placeholder="address"
+                                                        type="text" id="address"> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                                <div class="form-group">
+                                                    <label class="titleName">UserName</label>
+                                                    <input name="username" class="form-control" placeholder="username"
+                                                        type="text" id="userName">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                                <div class="form-group">
+                                                    <label class="titleName">Password</label>
+                                                    <input id="password" type="password" class="form-control"
+                                                        name="password"  >
+                                                    <span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                                <div class="form-group">
+                                                    <label class="titleName">Confirm Password</label>
+                                                    <input name="confirm_password" class="form-control" placeholder=""
+                                                        type="password" id="confirmpassword">
+                                                  
+                                                        <span id='message'></span>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="titleName">Role</label>
+                                                    <select class="form-control" id="role">
+                                                        <option value="" selected hidden>--Select--</option>
+                                                        <option value="India">user</option>
+                                                        <option value="India">admin</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+
+
+                                           <div class="jumbotron" style="background-color:white">
+                                        <h3>Photo</h3>
+                                        <!-- <label class="titleName">Acceptable image formats are jpg, jpeg, png & gif.</label> -->
+                                        <!-- <label class="titleName">Maximum image size allowed is 2MB.</label> --> -->
+
+                                        <div class="image-uploader" data-base-height="200" data-base-width="200">
+                                            <div class="image">
+
+
+                                                <!-- <label>click here to choose any image</label> -->
+
+                                                <img />
+                                            </div>
+                                            <input id="uploader" type="file" />
+
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row  " style="padding-left: 215px">
+                                <div class="col-xs-12 col-sm-6 col-md-2 ">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-2  ">
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-light ">reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js" type="text/javascript"></script>
+    <script src="register.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+    
+    $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+            $(".side-nav .collapse").on("hide.bs.collapse", function () {
+                $(this).prev().find(".fa").eq(1).removeClass("fa-angle-right").addClass("fa-angle-down");
+            });
+            $('.side-nav .collapse').on("show.bs.collapse", function () {
+                $(this).prev().find(".fa").eq(1).removeClass("fa-angle-down").addClass("fa-angle-right");
+            });
+        })
+
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("active");
+        });
+
+    
+        $(document).ready(function () {
+
+$("#adduser").submit(function (event) {
+    event.preventDefault();
+    ajaxPost();
+
+});
+function ajaxPost() {
+
+    // PREPARE FORM DATA
+    var formData = {
+        firstName: $("#firstName").val(),
+        lastName: $("#lastName").val(),
+        middleName: $("#middleName").val(),
+        dateOfBirth: $("#dateOfBirth").val(),
+        gender: $("#gender").val(),
+        country: $("#country").val(),
+        phone: $("#phone").val(),
+        phoneExt: $("#phoneExt").val(),
+        emailId: $("#email").val(),
+        address: $("#address").val(),
+        userName:$("#userName").val(),
+        password:$("#password").val()
+        
+
+        // confirm_password: $("#confirm_password").val(),
+        // role: $("#role").val(),
+        // userName: $("#userName").val(),
+        // address: $("#address").val(),
+
+    
+
+
+    }
+    console.log(formData.firstName,formData.lastname
+        );
+
+    $.ajax({
+
+type : "POST",
+contentType : "application/json",
+url :  "http://localhost:8081/NoteApp/save",
+data : JSON.stringify(formData),
+dataType : 'json',
+beforeSend: function(xhr) {
+xhr.setRequestHeader("Accept", "application/json");
+xhr.setRequestHeader("Content-Type", "application/json");
+},
+success : function(result) {
+    // if(result.message == "done"){
+        console.log('hello');
+        window.location = 'file:////home/bridgelabz/Documents/MyProject/Profile.html';
+
+       }
+//         else{
+
+//             console.log('error')
+//     alert('invalid username and password')
+//         }
+//     console.log(result);
+
+// }
+});
+resetData();
+}
+function resetData(){
+
+$("#firstName").val("");
+$("#lastName").val("");
+$("#middleName").val(""),
+$("#dateOfBirth").val(""),
+$("#gender").val(""),
+$("#country").val(""),
+$("#phone").val(""),
+$("#phoneExt").val(""),
+$("#email").val(""),
+$("#password").val(""),
+$("#address").val()
+
+//  $("#confirm_password").val(""),
+//  $("#role").val(""),
+//  $("#userName").val(""),
+//  $("#address").val("")
+
+
+}
+}
+)
+
+$('#left').click(function(){
+
+$(this).toggleClass('fa fa-chevron-left fa fa-chevron-right');
+
+});
+
+
+// $('#datepicker').datepicker({
+// uiLibrary: 'bootstrap',
+// format: "dd-mm-yyyy"
+// });
+
+
+// $(".toggle-password").click(function() {
+
+// $(this).toggleClass("fa-fw fa-eye-slash");
+// var input = $($(this).attr("toggle"));
+// if (input.attr("type") == "password") {
+//   input.attr("type", "text");
+// } else {
+//   input.attr("type", "password");
+// }
+// });
+// $('#password, #confirm_password').on('keyup keypress keydown', function () {
+// if ($('#password').val() == $('#confirm_password').val()) {
+//     $('#message').html('Matching').css('color', 'green');
+// } else 
+//     $('#message').html('Not Matching').css('color', 'red');
+// });
+    </script>
+
+
+
+
+    </script>
+</body>
+
+</html>
