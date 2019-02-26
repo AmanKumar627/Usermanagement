@@ -14,7 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
    
-    <title>UserManagaement</title>
+    <title>UserManagement</title>
    
 </head>
 
@@ -100,14 +100,25 @@
             },
                 success : function(result){
                         console.log(result.status);
-                        if(result.status== "done"){                
-                           console.log('hello');
+                        // if(response.body.statusCode ==166)
+             {
+                
+                
+                //    console.log(response)
+             
+                    // localStorage.setItem('token')
+                          
+             }
+                        if(result.status== "done"){  
+                                   
+                        console.log('hello');
+                        localStorage.setItem('token','result.status');
                         window.location = 'file:///home/bridgelabz/Documents/MyProject/Dashboard.html';
 
                         }
                         else{
 
-                            console.log('error')
+                          console.log('error')
                     alert('invalid username and password')
                         }
                     console.log(result);
