@@ -85,6 +85,7 @@
             </nav>
         </div>
        
+        <div class="container-fluid ">
         <div id="page-content-wrapper" style="padding-top:10px; ">
                 <div class="page-content">
                     <div class="container-fluid">
@@ -92,12 +93,20 @@
                     <div class="row">
                             <div class="well" style=" padding-top:80px; background-color: white">
                                     <p style="text-align:left;">
-                                            This text is left aligned
+                                            <h3>Profile</h3> 
                                             <span style="float:right;">  <a href=""><i class="fa fa-home "></i>Home</a>  /   <a href="">Dashboard</a></span>
-                                            </p>
+                                        </p>     
+                                    
+                                        <p>  You last logged in on:    <label id="lastloginStamp"></label></p>
                               
                             </div>
                         </div>
+
+
+
+
+
+
                         <div class="panel col-xs-12 col-sm-6 col-md-12">
 
                             <div class="row ">
@@ -160,7 +169,7 @@
     
                                 <div class=" col-xs-12 col-sm-5 col-md-7">
                                     <div class="tab-content">
-                                        <div id="home" class="tab-pane fade in active">
+                                        <!-- <div id="home" class="tab-pane fade in active">
                                             <div class="row">
                                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                                     <label>User Id</label>
@@ -232,8 +241,8 @@
                                                 <div class="col-xs-6 col-sm-6  col-md-6">
                                                     <p></p>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            </div> -->
+                                        <!-- </div> -->
                                         <!-- <div id="log" class="tab-pane fade">
                                             <div class="row">
                                                 <div class="col-xs-6 col-sm-6  col-md-6">
@@ -279,7 +288,97 @@
                                     </div>
                                 </div>
                             </div> -->
-                          
+                            <div id="home" class="tab-pane fade in active">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <label>First Name</label>
+                                    </div>
+                                    <div class=" col-xs-6 col-sm-6 col-md-6">
+                                        <label id="firstname"></label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6  col-md-6">
+                                        <label>Middle Name</label>
+                                    </div>
+                                    <div class=" col-xs-6 col-sm-6  col-md-6">
+                                        <label id="middleName"></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6  col-md-6">
+                                        <label>Last Name</label>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6  col-md-6">
+                                        <label id="lastName"></label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6  col-md-6">
+                                        <label>Date of Birth</label>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6  col-md-6">
+                                        <label id="dob"></label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class=" col-xs-6 col-sm-6  col-md-6">
+                                        <label>Gender</label>
+                                    </div>
+                                    <div class=" col-xs-6 col-sm-6  col-md-6">
+                                        <label id="gender"></label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class=" col-xs-6 col-sm-6  col-md-6">
+                                        <label>Country</label>
+                                    </div>
+                                    <div class=" col-xs-6 col-sm-6  col-md-6">
+                                        <label id="country"></label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6  col-md-6">
+                                        <label>phone</label>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6  col-md-6">
+                                        <label id="phone"></label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class=" col-xs-6 col-sm-6  col-md-6">
+                                        <label>Phone + Ext</label>
+                                    </div>
+                                    <div class=" col-xs-6 col-sm-6  col-md-6">
+                                        <label id="phoneExt"></label> </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6  col-md-6">
+                                        <label>Address</label>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6  col-md-6">
+                                        <label id="address"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="log" class="tab-pane fade ">
+                                <div id="result">
+
+                                    
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
                            
                                 
                         </div>
@@ -287,17 +386,17 @@
                 </div>
             </div>
         </div>
-        </div>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    
+     -->
                 
                         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
                         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-                    
+                        <script  src="profile.js"> </script>
                     
                         <script>
                             $(function () {
