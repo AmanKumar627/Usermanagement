@@ -116,3 +116,25 @@ $(document).ready(function () {
         }
     });
     });
+
+
+
+    $.ajax({
+        type: "GET",
+        contentType: "application/json",
+        url: "http://localhost:8081/NoteApp/logInTime",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.setRequestHeader("token", localStorage.getItem('token'));
+        },
+        success: function (logTime) {
+            var i;
+            var time='>';
+            for (i = 0; i < logTime.length; i++) {
+           $("#result").append('>'+logTime[i].lastloginStamp+'<br>');
+            }
+
+
+        }
+    });

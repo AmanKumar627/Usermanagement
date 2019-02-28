@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="Dashboard.css">
     <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-     <link href="test2.css" rel="stylesheet"> 
+     <!-- <link href="test2.css" rel="stylesheet">  -->
 
 </head>
 
@@ -309,6 +309,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js" type="text/javascript"></script>
     <script src="register.js"></script>
+    <script src="EditProfile.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script>
     
@@ -326,132 +327,19 @@
             e.preventDefault();
             $("#wrapper").toggleClass("active");
         });
+        $('#left').click(function () {
+
+     $(this).toggleClass('fa fa-chevron-left fa fa-chevron-right');
+
+     });
 
     
-        $(document).ready(function () {
-
-$("#adduser").submit(function (event) {
-    event.preventDefault();
-    ajaxPost();
-
-});
-function ajaxPost() {
-
-    // PREPARE FORM DATA
-    var formData = {
-        firstName: $("#firstName").val(),
-        lastName: $("#lastName").val(),
-        middleName: $("#middleName").val(),
-        dateOfBirth: $("#dateOfBirth").val(),
-        gender: $("#gender").val(),
-        country: $("#country").val(),
-        phone: $("#phone").val(),
-        phoneExt: $("#phoneExt").val(),
-        emailId: $("#email").val(),
-        address: $("#address").val(),
-        userName:$("#userName").val(),
-        password:$("#password").val()
-        
-
-        // confirm_password: $("#confirm_password").val(),
-        // role: $("#role").val(),
-        // userName: $("#userName").val(),
-        // address: $("#address").val(),
-
-    
-
-
-    }
-    console.log(formData.firstName,formData.lastname
-        );
-
-    $.ajax({
-
-type : "POST",
-contentType : "application/json",
-url :  "http://localhost:8081/NoteApp/save",
-data : JSON.stringify(formData),
-dataType : 'json',
-beforeSend: function(xhr) {
-xhr.setRequestHeader("Accept", "application/json");
-xhr.setRequestHeader("Content-Type", "application/json");
-},
-success : function(result) {
-    // if(result.message == "done"){
-        console.log('hello');
-        window.location = 'file:////home/bridgelabz/Documents/MyProject/Profile.html';
-
-       }
-//         else{
-
-//             console.log('error')
-//     alert('invalid username and password')
-//         }
-//     console.log(result);
-
-// }
-});
-resetData();
-}
-function resetData(){
-
-$("#firstName").val("");
-$("#lastName").val("");
-$("#middleName").val(""),
-$("#dateOfBirth").val(""),
-$("#gender").val(""),
-$("#country").val(""),
-$("#phone").val(""),
-$("#phoneExt").val(""),
-$("#email").val(""),
-$("#password").val(""),
-$("#address").val()
-
-//  $("#confirm_password").val(""),
-//  $("#role").val(""),
-//  $("#userName").val(""),
-//  $("#address").val("")
-
-
-}
-}
-)
-
-$('#left').click(function(){
-
-$(this).toggleClass('fa fa-chevron-left fa fa-chevron-right');
-
-});
-
-
-// $('#datepicker').datepicker({
-// uiLibrary: 'bootstrap',
-// format: "dd-mm-yyyy"
-// });
-
-
-// $(".toggle-password").click(function() {
-
-// $(this).toggleClass("fa-fw fa-eye-slash");
-// var input = $($(this).attr("toggle"));
-// if (input.attr("type") == "password") {
-//   input.attr("type", "text");
-// } else {
-//   input.attr("type", "password");
-// }
-// });
-// $('#password, #confirm_password').on('keyup keypress keydown', function () {
-// if ($('#password').val() == $('#confirm_password').val()) {
-//     $('#message').html('Matching').css('color', 'green');
-// } else 
-//     $('#message').html('Not Matching').css('color', 'red');
-// });
     </script>
 
 
 
 
-    </script>
+    
 </body>
 
 </html>
