@@ -6,27 +6,31 @@ console.log('logout');
 }
 );
 
-(document).ready(function () {
-    $.ajax({
-        type: "GET",
-        contentType: "application/json",
-        url: "http://localhost:8081/NoteApp/getUser",
-        beforeSend: function (xhr) {
-            xhr.setRequestHeader("Accept", "application/json");
-            xhr.setRequestHeader("Content-Type", "application/json");
-            xhr.setRequestHeader("token", localStorage.getItem('token'));
-        },
-        success: function (user) {
+$(document).ready(function () {
+   
 
-            console.log(user);
+    var table = $('#table').DataTable({
+    "sAjaxSource": "http://localhost:8081/NoteApp/accountList",
+    "sAjaxDataProp": "",
+    "order": [[ 0, "asc" ]],
+    "aoColumns": [
 
-            $('#lastloginStamp').text(user.lastloginStamp);
+    { "mData": "userName" },
+    { "mData": "email" },
+    { "mData": "date_of_birth" },
+    { "mData": "status" },
+    { "mData": "role" },
+    {render : editIcon}
 
-        }
-    });
+    ]
+    })
+
+   
+
 });
 
-
-$(document).ready(function() {
-    $('#example').DataTable();
-} );
+var editIcon=function(data,type,row){
+if(type ==='display'){
+    return '<a href="./EditProfile.html" class="fa fa-pencil"/>';
+}
+}
